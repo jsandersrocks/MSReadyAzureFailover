@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.7.0-preview5.19224.8\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,20 +70,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="css\base\custom-media.css" />
+    <Content Include="css\base\elements.css" />
+    <Content Include="css\base\variables.css" />
+    <Content Include="css\components\aligner.css" />
+    <Content Include="css\components\browser.css" />
+    <Content Include="css\components\button.css" />
+    <Content Include="css\components\container.css" />
+    <Content Include="css\components\demo.css" />
+    <Content Include="css\components\error.css" />
+    <Content Include="css\components\feature.css" />
+    <Content Include="css\components\footer.css" />
+    <Content Include="css\components\grid.css" />
+    <Content Include="css\components\header.css" />
+    <Content Include="css\components\holy-grail.css" />
+    <Content Include="css\components\image.css" />
+    <Content Include="css\components\input-add-on.css" />
+    <Content Include="css\components\media.css" />
+    <Content Include="css\components\notice.css" />
+    <Content Include="css\components\section.css" />
+    <Content Include="css\components\site.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\utils\compat.css" />
+    <Content Include="css\utils\media.css" />
+    <Content Include="css\utils\size.css" />
+    <Content Include="css\vendor\font-awesome-extensions.css" />
+    <Content Include="css\vendor\highlight.css" />
+    <Content Include="css\vendor\twitter.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\jsandersready2019east - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\jsandersready2019west - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
